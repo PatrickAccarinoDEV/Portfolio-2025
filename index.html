@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Modo Escuro</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dark">
+    <canvas id="rocket-canvas"></canvas>
+
+    <div class="container">
+      <header>
+        <button id="toggle-theme">
+          <span id="theme-icon" class="icon">🌙</span>
+          <span id="theme-text">Modo Escuro</span>
+        </button>
+
+        <img src="assets/EU.jpg" alt="FotoPatrick" class="profile-pic" />
+        <h1>Patrick Accarino</h1>
+        <p>Analista de Sistemas</p>
+        <div class="header-actions">
+          <a href="#contato" class="btn btn-primary">Entrar em contato</a>
+        </div>
+      </header>
+
+      <main class="grid grid-2-1">
+        <div>
+          <section>
+            <h2>Sobre mim</h2>
+            <p>
+              Meu nome é Patrick Accarino, sou formado em Análise e
+              Desenvolvimento de Sistemas. Atualmente, estou em busca da minha
+              primeira oportunidade profissional como desenvolvedor full stack.
+              Desde a infância, sempre fui apaixonado por tecnologia e, ao
+              iniciar meus estudos na área, tive a certeza de que escolhi o
+              caminho certo. Sou motivado por desafios, procuro entregar
+              soluções criativas e eficientes, e estou comprometido em evoluir
+              continuamente como profissional e contribuir de forma positiva
+              para os projetos dos quais fizer parte.
+            </p>
+
+            <h3>Projetos em destaque</h3>
+            <ul>
+              <li>
+                <button
+                  class="btn"
+                  onclick="openModal('Mario Jump Game', 'Jogo do Mario feito em sua grande parte usando CSS')"
+                >
+                  Mario Jump Game
+                </button>
+              </li>
+              <li>
+                <button
+                  class="btn"
+                  onclick="openModal('Dogs Social', 'Rede social feita para cachorros a partir do curso da Origamid.')"
+                >
+                  Dogs Social
+                </button>
+              </li>
+            </ul>
+
+            <div id="project-modal">
+              <div>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <button onclick="closeModal()">Fechar</button>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Habilidades</h3>
+            <div class="skills">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>QGIS</span>
+              <span>Sistema SEI</span>
+            </div>
+          </section>
+        </div>
+
+        <aside>
+          <div>
+            <h3>Dados</h3>
+            <ul>
+              <li><strong>Local:</strong> Rio de Janeiro, Brasil</li>
+              <li><strong>Disponibilidade:</strong> CLT / PJ</li>
+              <li>
+                <strong>Formação:</strong> Formado em Análise e Desenvolvimento
+                de Sistemas
+              </li>
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:ptkaccarino@hotmail.com"
+                  >ptkaccarino@hotmail.com</a
+                >
+              </li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Me enviar um e-mail</a>
+          </div>
+        </aside>
+      </main>
+
+      <footer id="contato">
+        <h2>Entre em contato</h2>
+        <p>
+          Preencha o formulário abaixo e eu receberei um e-mail através do seu
+          cliente de e-mail.
+        </p>
+        <form id="contact-form">
+          <label
+            >Nome
+            <input type="text" id="name" placeholder="Seu nome" required />
+          </label>
+          <label
+            >Email
+            <input
+              type="email"
+              id="email"
+              placeholder="seuemail@exemplo.com"
+              required
+            />
+          </label>
+          <label
+            >Mensagem
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Escreva sua mensagem..."
+              required
+            ></textarea>
+          </label>
+          <button type="submit" class="primary">Enviar e-mail</button>
+        </form>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #111;
+  --card: #fff;
+  --primary: #4f46e5;
+  --secondary: #7c3aed;
+}
+body.dark {
+  --bg: #111827;
+  --text: #f3f4f6;
+  --card: #1f2937;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: relative;
+  padding-top: 0;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+header h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0.3rem;
+}
+header p {
+  font-size: 1rem;
+  color: gray;
+  margin: 0;
+}
+.header-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+#toggle-theme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+button,
+a.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover,
+a.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+button:active,
+a.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+a.btn-primary,
+button.primary {
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  color: #fff;
+}
+
+section,
+aside,
+footer {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-top: 1rem;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .grid-2-1 {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+.skills span {
+  display: inline-block;
+  background: rgba(128, 128, 128, 0.2);
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: none;
+  background: rgba(128, 128, 128, 0.1);
+  color: var(--text);
+}
+form button {
+  margin-top: 1rem;
+}
+small {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+.icon.animate {
+  transform: rotate(180deg);
+  opacity: 0;
+}
+
+#project-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#project-modal > div {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+#project-modal button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+#rocket-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .grid-2-1 {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+}
